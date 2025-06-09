@@ -25,7 +25,14 @@ INVALID_VIOLATION = {
 @pytest.fixture(autouse=True)
 def setup_database():
     # Setup: Add test API key and dataset item
-    db.api_keys.update({VALID_API_KEY: {"id": "user_123", "customer_id": "customer_123"}})
+    db.api_keys.update(
+        {
+            VALID_API_KEY: {
+                "id": "user_123",
+                "customer_id": "customer_123"
+            }
+        }
+    )
     db.dataset_items.add(("dataset_123", "item_123"))
     yield
     # Teardown: Clean up test data

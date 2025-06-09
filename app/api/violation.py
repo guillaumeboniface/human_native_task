@@ -7,7 +7,10 @@ from app.db.mock_db import db
 router = APIRouter()
 
 @router.post("/violation")
-async def create_violation(violation: ViolationRequest, user: User = Depends(verify_api_key)) -> dict:
+async def create_violation(
+        violation: ViolationRequest,
+        user: User = Depends(verify_api_key),
+    ) -> dict:
     """
     Create a new violation record.
     

@@ -15,7 +15,11 @@ mock_dataset_items = [
 ]
 
 class MockDatabase:
-    def __init__(self, api_keys: dict[str, str] = mock_api_keys, dataset_items: list[tuple[str, str]] = mock_dataset_items) -> None:
+    def __init__(
+            self,
+            api_keys: dict[str, str] = mock_api_keys,
+            dataset_items: list[tuple[str, str]] = mock_dataset_items,
+        ) -> None:
         """Mocking a database with tables for API keys and dataset items"""
         self.api_keys = api_keys
         self.dataset_items = set(dataset_items)
