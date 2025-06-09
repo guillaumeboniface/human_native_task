@@ -57,9 +57,11 @@ additional cases.
 - We want to make reporting easy rather than put an unnecessary burden on the customer.
 They are the ones paying us after all. For that reason and although I considered it,
 the violation schema doesn't include a field to provide the details of where in the
-asset the violation happened (as in the segment in an audio file for example)
-- There's no need to allow for the management of those violations. Fetching, updating or
-deleting violations were not covered.
+asset the violation happened (as in the segment in an audio file for example). I'm also
+thinking that even if the customer provided that info, we'd need to double check ourselves
+anyway.
+- There's no need to allow for the management of those violations we're only handling reporting.
+Fetching, updating or deleting violations were not covered.
 
 ## Violation request
 The service expose a POST endpoint that takes in the body (see app/models/violation.py for the spec):
