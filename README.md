@@ -4,8 +4,7 @@ This is an API service that exposes an endpoint allowing Human Native customers
 to report violation of local laws by a data asset we provided.
 
 ## Installing dependencies
-Create a virtual environment, we used python 3.12 for development and we make no guaranty of
-compatibility with other versions
+Create a virtual environment, I used python 3.12 for development
 ```
 python -m venv venv
 ```
