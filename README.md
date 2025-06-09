@@ -27,7 +27,7 @@ pytest
 python -m app.main
 ```
 
-## Trying a request
+## Test a request
 ```
 curl -X POST "http://localhost:8000/violation" \
     -H "X-API-Key: api_key_1" \
@@ -39,6 +39,9 @@ curl -X POST "http://localhost:8000/violation" \
           "type": "privacy"
         }'
 ```
+
+## Documentation
+Once the service is running, the documentation can be checked at [localhost:8000/docs](http://localhost:8000/docs)
 
 # Design choices
 
@@ -69,6 +72,8 @@ The service expose a POST endpoint that takes in the body (see app/models/violat
 - jurisdictions, which is a list of two letter codes marking against which set of rules
 the violation is reported to be happening
 - type, which is the type of violation (e.g privacy)
+
+It provides detailed messages if the payload doesn't meet the API requirements.
 
 ## Security
 ### Authentication

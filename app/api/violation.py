@@ -16,8 +16,8 @@ async def create_violation(
     
     - **dataset_id**: Dataset identifier
     - **item_id**: Violation identifier
-    - **jurisdictions**: List of jurisdictions (non-empty)
-    - **type**: Violation type
+    - **jurisdictions**: List of jurisdictions (non-empty), see Jurisdiction enum
+    - **type**: Violation type, see ViolationType enum
     """
     violation = violation.model_dump()
     violation['customer_id'] = user.customer_id
