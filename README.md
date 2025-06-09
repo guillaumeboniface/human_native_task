@@ -6,20 +6,31 @@ to report violation of local laws by a data asset we provided.
 ## Installing dependencies
 Create a virtual environment, we used python 3.12 for development and we make no guaranty of
 compatibility with other versions
-> python -m venv venv
+```
+python -m venv venv
+```
 Activate the environment
-> source venv/bin/activate
+```
+source venv/bin/activate
+```
 Install the dependencies
-> pip install -r requirements.txt
+```
+pip install -r requirements.txt
+```
 
 ## Running the test suite
-> pytest
+```
+pytest
+```
 
 ## Running the service
-> python -m app.main
+```
+python -m app.main
+```
 
 ## Trying a request
-> curl -X POST "http://localhost:8000/violation" \
+```
+curl -X POST "http://localhost:8000/violation" \
     -H "X-API-Key: api_key_1" \
     -H "Content-Type: application/json" \
     -d '{
@@ -28,6 +39,7 @@ Install the dependencies
           "jurisdictions": ["us", "eu"],
           "type": "privacy"
         }'
+```
 
 # Design choices
 
